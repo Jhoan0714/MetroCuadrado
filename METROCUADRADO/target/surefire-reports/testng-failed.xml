@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Metro Cuadrado Test]">
+  <listeners>
+    <listener class-name="com.tyba.metrocuadrado.utils.report.listener.TestListener"/>
+    <listener class-name="com.tyba.metrocuadrado.utils.report.listener.AnnotationTransformer"/>
+  </listeners>
+  <test name="Calcular Credito Hipotecario Metro Cuadrado(failed)">
+    <classes>
+      <class name="com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario">
+        <methods>
+          <include name="test"/>
+          <include name="verificareEstimacionCredito" invocation-numbers="0 0"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario -->
+    </classes>
+  </test> <!-- Calcular Credito Hipotecario Metro Cuadrado(failed) -->
+</suite> <!-- Failed suite [Metro Cuadrado Test] -->

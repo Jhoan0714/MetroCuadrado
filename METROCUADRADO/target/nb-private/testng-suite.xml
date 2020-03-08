@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Metro Cuadrado Test" >
+    <listeners>
+        <listener class-name="com.tyba.metrocuadrado.utils.report.listener.TestListener"/>
+        <listener class-name="com.tyba.metrocuadrado.utils.report.listener.AnnotationTransformer"/>
+    </listeners>
+ 
+    <test name="Calcular Credito Hipotecario Metro Cuadrado">
+        <classes>
+            <class name="com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario">
+        <methods>
+          <include name="calcularCreditoVivienda"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario] -->

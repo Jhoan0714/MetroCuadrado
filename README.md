@@ -2,7 +2,7 @@
 
 1. Estructura Del Proyecto.
 	<p align="center">
-		<img width="484" height="661" src="https://github.com/Jhoan0714/MetroCuadrado/blob/master/Informacion/Estructura.png">
+		<img width="484" height="661" src="https://github.com/Jhoan0714/MetroCuadrado/blob/master/INFORMACION/Estructura.png">
 	</p>
 	•	Se crea el proyecto de automatización front end, ambiente web, para metro cuadrado, en el cual se utiliza:
 	
@@ -18,14 +18,14 @@
 
 	•	Se crea un archivo de ejecución TestNG.xml, el cual se encuentra en la raíz del proyecto. Este archivo ejecutara los test:  
 	<p align="center">
-		<img width="567" height="255" src="https://github.com/Jhoan0714/MetroCuadrado/blob/master/Informacion/ConfigureTestNg.png">
+		<img width="567" height="255" src="https://github.com/Jhoan0714/MetroCuadrado/blob/master/INFORMACION/ConfigureTestNg.png">
 	</p>
 	•	Para la ejecución en caso de estar en un IDE, ubicamos el archivo TestNG.xml en caso contrario ejecutamos en la raíz del proyecto el siguiente comando “mvn test -Dsurefire.suiteXmlFiles=TestNG.xml”.  
 	•	La ejecución creara una carpeta con el nombre Reports y dentro de esta un archivo html con el reporte de ejecución.  
 	<p align="center">
-		<img width="567" height="270" src="https://github.com/Jhoan0714/MetroCuadrado/blob/master/Informacion/Dashboard.png">
+		<img width="567" height="270" src="https://github.com/Jhoan0714/MetroCuadrado/blob/master/INFORMACION/Dashboard.png">
 	</p>
 	<p align="center">
-		<img width="567" height="270" src="https://github.com/Jhoan0714/MetroCuadrado/blob/master/Informacion/Reporte.png">
+		<img width="567" height="270" src="https://github.com/Jhoan0714/MetroCuadrado/blob/master/INFORMACION/Reporte.png">
 	</p>
 	En este reporte se puede encontrar la información de los test, su estado si fallo, paso, no fue ejecutado, también su inicio y hora de ejecución, la evidencia a nivel de imagen y un dashboard inicial, que brinda la información a nivel general.

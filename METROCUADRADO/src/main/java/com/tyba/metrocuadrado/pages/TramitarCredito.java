@@ -18,6 +18,9 @@ import org.openqa.selenium.support.ui.Select;
 public class TramitarCredito {
 
     private WebDriver driver;
+    
+    @FindBy(xpath = "//*[@id=\"td-resul-calc\"]/tbody/tr[2]/td/div/div[3]")
+    private WebElement tramitarCredito;
 
     @FindBy(name = "userNameLQN")
     private WebElement usuario;
@@ -49,6 +52,7 @@ public class TramitarCredito {
     }
 
     public void calcularCuotas(String userName, String identificacion,String email,String telefono,int ciudadIndice,String valorInmueble,String valorCredito, int plazoIndice){
+        this.tramitarCredito.click();
         this.usuario.sendKeys(userName);
         this.identificacion.sendKeys(userName);
         this.email.sendKeys(email);

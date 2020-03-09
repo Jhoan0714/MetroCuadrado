@@ -33,18 +33,15 @@ public class CalculadoraCreditoHipotecarioVivienda {
         PageFactory.initElements(this.driver, this);
     }
     
-    public void calcularCredito(String ingresosMensuales, int indice) throws InterruptedException{
+    public void calcularCredito(String ingresosMensuales, int indice){
         this.ingresosMensuales.sendKeys(ingresosMensuales);
         seleccionarPlazo(indice);
-        Thread.sleep(5000);
         calcular.click();
-        Thread.sleep(5000);
     }
     
     private void seleccionarPlazo(int indice){
         Select select = new Select(plazo);
-        select.selectByIndex(indice);
-        
+        select.selectByIndex(indice); 
     }
 
 }

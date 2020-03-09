@@ -1,8 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 58.812 s <<< FAILURE! - in TestSuite
-verificareEstimacionCredito(com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario)  Time elapsed: 0.973 s  <<< FAILURE!
-java.lang.AssertionError: expected [] but found [2500000]
-	at com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario.verificareEstimacionCredito(TestCalcularCreditoHipotecario.java:41)
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 71.396 s <<< FAILURE! - in TestSuite
+verificarEstimacionCredito(com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario)  Time elapsed: 31.133 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":".lqn\-bar\-btn\ general\-lightbox\-trigger"}
+  (Session info: chrome=80.0.3987.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QOPOM1B', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\JHOANL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60556}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a112461db5d281ccee745d980c4915fe
+*** Element info: {Using=class name, value=lqn-bar-btn general-lightbox-trigger}
+	at com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario.verificarEstimacionCredito(TestCalcularCreditoHipotecario.java:40)
+
+tramitarCredito(com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario)  Time elapsed: 0.707 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=80.0.3987.122)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QOPOM1B', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\JHOANL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60556}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a112461db5d281ccee745d980c4915fe
+	at com.tyba.metrocuadrado.test.TestCalcularCreditoHipotecario.tramitarCredito(TestCalcularCreditoHipotecario.java:51)
 

@@ -7,6 +7,7 @@ package com.tyba.metrocuadrado.test;
 
 import com.tyba.metrocuadrado.pages.CalculadoraCreditoHipotecarioVivienda;
 import com.tyba.metrocuadrado.pages.EstimacionCreditoHipotecario;
+import com.tyba.metrocuadrado.pages.TramitarCredito;
 import com.tyba.metrocuadrado.utils.report.ReportManager;
 import com.tyba.metrocuadrado.utils.report.ReportTestManager;
 import java.lang.reflect.Method;
@@ -22,23 +23,32 @@ public class TestCalcularCreditoHipotecario extends MetroCuadrado {
 
     @BeforeTest
     public void test() {
-        ReportManager.name = "Calcular Credito.html";
+        ReportManager.name = "Calcular Credito Hipotecario.html";
     }
 
     @Test(priority = 0, description = "Calcular Credito Hipotecario Vivienda")
-    public void calcularCreditoVivienda(Method method) throws InterruptedException {
+    public void calcularCreditoVivienda(Method method){
         ReportTestManager.startTest(method.getName(), "Calcular Credito Hipotecario Vivienda");
         CalculadoraCreditoHipotecarioVivienda cchv = new CalculadoraCreditoHipotecarioVivienda(driver);
         cchv.calcularCredito("2500000", 0);
     }
 
     @Test(priority = 1, description = "Verificar Estimacion Credito")
-    public void verificareEstimacionCredito(Method method) {
-        ReportTestManager.startTest(method.getName(), "Verificar estimacion del credito - Teniendo en cuenta los siguientes valores(Cuanto puede prestar el banco,¿Cuota inicia minima de?, ¿Puede comprar un inmueble de?");
+    public void verificarEstimacionCredito(Method method) {
+        ReportTestManager.startTest(method.getName(), "Verificar estimacion del credito, teniendo en cuenta las siguientes variables<p> - Cuanto puede prestar el banco<p> - Cuota inicia minima de?<p> - Puede comprar un inmueble de?");
         EstimacionCreditoHipotecario ech = new EstimacionCreditoHipotecario(driver);
         String[] values = ech.verificarEstimacionCredito();
-        System.out.println("Valores " + values[0]);
-        Assert.assertEquals("2500000",values[0]);
+        assert "2500000".equals(values[0].trim()) : "El ingreso mensual no corresponde al ingresado en la calculadora";
+        assert Integer.parseInt(values[1].trim()) > 0 : "El monto que el banco prestara no es correcto";
+        assert Integer.parseInt(values[2].trim()) >= 0 : "El valor de la cuota inicial no es correcto";
+        assert Integer.parseInt(values[3].trim()) > 0 : "El valor compra maximo de inmueble no es correcto";
+    }
+
+    @Test(priority = 2, description = "Tramitar Credito")
+    public void tramitarCredito(Method method) throws InterruptedException {
+        ReportTestManager.startTest(method.getName(), "Ingresa la informacion del usuario para iniciar con el tramite del credito");
+        TramitarCredito tc = new TramitarCredito(driver);
+        tc.calcularCuotas("Jose Lopez", "123456789", "abcd@gmail.com", "7456789", 1, "150000000", "45000000", 1);
     }
 
 }

@@ -60,7 +60,7 @@ public class TestListener extends MetroCuadrado implements ITestListener  {
         Object testClass = iTestResult.getInstance();
         WebDriver webDriver = ((MetroCuadrado) testClass).driver;
         String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BASE64);
-        ReportTestManager.getTest().log(LogStatus.FAIL, "Test Failed",ReportTestManager.getTest().addBase64ScreenShot(base64Screenshot));
+        ReportTestManager.getTest().log(LogStatus.FAIL, "Test Failed -" + iTestResult.getThrowable().getMessage(),ReportTestManager.getTest().addBase64ScreenShot(base64Screenshot));
     }
 
     @Override

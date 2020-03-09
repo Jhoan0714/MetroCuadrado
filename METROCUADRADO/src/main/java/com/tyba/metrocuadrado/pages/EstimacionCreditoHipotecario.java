@@ -30,10 +30,6 @@ public class EstimacionCreditoHipotecario {
     @FindBy(xpath = "/html/body/div[3]/div[2]/div/div/div[1]/div[3]/div[1]/dl[3]/dd")
     private WebElement compraInmuebleValor;
     
-    //@FindBy(xpath = "//*[@id=\"td-resul-calc\"]/tbody/tr[2]/td/div/div[3]")
-    @FindBy(className = "lqn-bar-btn general-lightbox-trigger")
-    private WebElement tramitarCredito;
-    
     public EstimacionCreditoHipotecario(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
@@ -41,7 +37,6 @@ public class EstimacionCreditoHipotecario {
     
     public String[] verificarEstimacionCredito(){
         String[] datos = new String[]{ingresosMensual.getText().replaceAll("\\$|,", ""),bancoPrestaHasta.getText().replaceAll("\\$|,", ""),cuotaInicial.getText().replaceAll("\\$|,", ""),compraInmuebleValor.getText().replaceAll("\\$|,", "")};
-        tramitarCredito.click();
         return datos;
     }
 }
